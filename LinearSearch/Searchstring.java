@@ -1,12 +1,19 @@
 package LinearSearch;
 
+import java.util.Scanner;
+
 public class Searchstring {
     public static void main(String[] args) {
-        String[] arr={"Ajay","Dhanu","Abbu","Madhu","Bramha"};
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        String[] str= new String[n];
+        for(int i=0;i< str.length;i++){
+            str[i]=sc.nextLine();
+        }
+        String val= sc.nextLine();
 
-        String val="Dhanu";
-
-        System.out.println("String found at index : "+LinearStringSearch(arr,val));
+        System.out.println("String found at index : "+LinearStringSearch(str,val));
     }
 
     private static int LinearStringSearch(String[] arr, String val) {
